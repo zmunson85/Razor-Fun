@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+@{
+    var StringList = new List<string>
+    {
+        "Apple Pie",
+        "Burritos",
+        "Clams Casino",
+        "Donuts"
+    };
+        
+    foreach(var word in StringList)
+    {
+        <div>
+            <p>@word</p>
+            @if(word.Length <4)
+            {
+                <p>@word This word is too short</p>
+            }           
+    </div>
+    }
+}
+</body>
+</html>
+@* <body>
+<ul style="list-style-type:none;" class="list-group">
+    <h1>Here are some delicious foods!</h1>
+    <li class="list-group-item">Apple Pie</li>
+    <li class="list-group-item">Burritos</li>
+    <li style="color: red;" class="list-group-item">Clams Casino</li>
+    <li class="list-group-item">Donuts</li>
+</ul>
+</body> *@
